@@ -130,7 +130,9 @@ to produce realistic demand fluctuations.
 
 ## Preview
 
-![Data Generation](Screenshots/data_generation.png)
+<p align="center">
+<img src="Screenshots/generate_data outcome.png" width="100%">
+</p>
 
 ---
 
