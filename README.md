@@ -1,222 +1,338 @@
-Stock & Inventory Management Analytics Dashboard
+# 📦 Stock & Inventory Management Analytics Dashboard
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
-  <img src="https://img.shields.io/badge/Python-Data%20Pipeline-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/DAX-Measures-512BD4?style=for-the-badge" alt="DAX">
-  <img src="https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas" alt="Pandas">
+
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Python](https://img.shields.io/badge/Python-ETL-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-Measures-512BD4?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?style=for-the-badge&logo=pandas)
+
 </p>
 
-> An end-to-end Business Intelligence project that generates, cleans, models, and analyzes retail inventory data using Python and Power BI.
+---
 
-## Project overview
+# 📖 About The Project
 
-This project simulates a real-world Stock & Inventory Management System. A realistic retail dataset is generated with Python, cleaned and validated through a dedicated quality process, and then analyzed in Power BI through five interactive dashboards.
+This project demonstrates an **end-to-end Business Intelligence workflow** for a Stock & Inventory Management system.
 
-The solution covers sales, inventory, customers, purchase orders, returns, promotions, warehouses, and supplier performance. Clean CSV files are modeled in a star schema and enhanced with DAX measures to turn operational data into actionable business insights.
+Instead of relying on publicly available datasets, the complete retail dataset was generated using Python to simulate realistic business scenarios including customer purchases, inventory movements, supplier performance, warehouse operations, seasonal sales, promotions, and returns.
 
-## Project workflow
+After generating the data, a dedicated data cleaning pipeline was implemented to validate and prepare the datasets before importing them into Power BI.
 
-```text
-Python data generation
-        |
-        v
-Data cleaning & quality validation
-        |
-        v
-Clean CSV datasets
-        |
-        v
-Power BI data model (star schema)
-        |
-        v
-DAX measures & KPIs
-        |
-        v
-Five interactive dashboards
-        |
-        v
-Business insights
+The cleaned data was modeled using a **Star Schema**, followed by the development of interactive dashboards and business KPIs using DAX.
+
+The final result is a complete Business Intelligence solution that transforms raw operational data into actionable insights.
+
+---
+
+# 🚀 Project Workflow
+
+```
+Synthetic Data Generation (Python)
+                │
+                ▼
+Data Cleaning & Quality Validation
+                │
+                ▼
+Clean CSV Dataset
+                │
+                ▼
+Power BI Data Model (Star Schema)
+                │
+                ▼
+DAX Measures & KPIs
+                │
+                ▼
+Interactive Dashboard Development
+                │
+                ▼
+Business Insights
 ```
 
-## Technology stack
+---
+
+# 🛠 Tech Stack
 
 - Power BI
 - Python
-- Pandas and NumPy
+- Pandas
+- NumPy
 - DAX
 - CSV
-- Star schema data modeling
+- Star Schema Data Modeling
 
-## Key features
+---
 
-- Synthetic retail data generation with seasonal demand, promotions, returns, and inventory movements.
-- Data cleaning and quality validation before reporting.
-- Clean CSV datasets prepared for analysis.
-- Star schema model in Power BI.
-- Interactive slicers, cross-filtering, KPI cards, trend analysis, and time intelligence.
-- Five focused dashboards for executive, inventory, sales, customer, and operations analysis.
+# 📂 Repository Structure
 
-## Repository structure
-
-```text
-Stock-and-Inventory-Management-Dashboard/
-|
-|-- PowerBI/
-|   `-- StockAndInventoryManagement_new.pbix
-|
-|-- Python/
-|   |-- data_generation.py
-|   `-- data_cleaning.py
-|
-|-- Data/
-|   |-- data_sales.csv
-|   |-- data_returns.csv
-|   |-- data_purchase_orders.csv
-|   |-- data_promotions.csv
-|   |-- data_products.csv
-|   |-- data_customers.csv
-|   `-- data_current_inventory.csv
-|
-|-- Screenshots/
-|   |-- generate_data outcome.png
-|   |-- cleaned_data 1.png
-|   |-- cleaned_data 2.png
-|   |-- Executive Dashboard.png
-|   |-- inventory analysis dashboard.png
-|   |-- sales dashboard.png
-|   |-- Customer analytics dashboard.png
-|   `-- operations & performance dashboard.png
-|
-`-- README.md
+```
+Stock-and-Inventory-Management-Dashboard
+│
+├── 📁 PowerBI
+│   └── StockAndInventoryManagement.pbix
+│
+├── 📁 Python
+│   ├── data_generation.py
+│   └── data_cleaning.py
+│
+├── 📁 Data
+│   ├── clean_sales.csv
+│   ├── clean_customers.csv
+│   ├── clean_products.csv
+│   ├── clean_inventory.csv
+│   ├── clean_inventory_movements.csv
+│   ├── clean_purchase_orders.csv
+│   ├── clean_returns.csv
+│   ├── clean_suppliers.csv
+│   ├── clean_promotions.csv
+│   └── clean_date.csv
+│
+├── 📁 Screenshots
+│   ├── data_generation.png
+│   ├── data_cleaning.png
+│   ├── Executive Dashboard.png
+│   ├── Inventory Dashboard.png
+│   ├── Sales Dashboard.png
+│   ├── Customer Dashboard.png
+│   └── Operations Dashboard.png
+│
+├── data_quality_log.json
+└── README.md
 ```
 
-## 1. Synthetic data generation
+---
 
-Python is used to generate realistic retail data instead of relying on a public dataset. The generated data includes products, customers, sales transactions, purchase orders, current inventory, inventory movements, returns, promotions, and supplier-related operational activity.
+# 🐍 Step 1 — Synthetic Data Generation
 
-Retail events such as Black Friday, Diwali, Christmas, New Year, and seasonal sales are represented to create realistic changes in demand.
+The project begins by generating a realistic retail dataset using Python.
 
-<p align="center">
-  <img src="Screenshots/generate_data%20outcome.png" alt="Python data generation output" width="100%">
-</p>
+The generated data includes:
 
-## 2. Data cleaning & quality validation
+- Products
+- Customers
+- Sales Transactions
+- Purchase Orders
+- Inventory
+- Inventory Movements
+- Returns
+- Promotions
+- Supplier Performance
 
-Before loading the data into Power BI, the Python cleaning pipeline validates and prepares each dataset. The process includes:
+The dataset also simulates real retail events including:
 
-- Missing-value and duplicate checks
-- Duplicate transaction validation
-- Orphan-record detection
-- Negative-value and date validation
-- Outlier detection using the IQR method
-- Warehouse and category validation
-- Data-quality scoring and reporting
+- Black Friday
+- Diwali
+- Christmas
+- New Year
+- Summer Sale
 
-<p align="center">
-  <img src="Screenshots/cleaned_data%201.png" alt="Data cleaning output 1" width="100%">
-</p>
+to produce realistic demand fluctuations.
 
-<p align="center">
-  <img src="Screenshots/cleaned_data%202.png" alt="Data cleaning output 2" width="100%">
-</p>
+## Preview
 
-## 3. Power BI model and dashboards
+![Data Generation](Screenshots/data_generation.png)
 
-The cleaned CSV datasets are imported into Power BI and organized into a star schema. DAX measures, dynamic KPIs, interactive slicers, and visualizations are used to explore performance across sales, inventory, customers, and operations.
+---
 
-## Dashboard previews
+# 🧹 Step 2 — Data Cleaning & Quality Validation
 
-### Executive Dashboard
+Before importing the data into Power BI, a dedicated cleaning pipeline validates and prepares every dataset.
 
-Provides a high-level view of business performance through KPIs, revenue and profit trends, sales volume, returns, and warehouse insights.
+The cleaning process includes:
 
-<p align="center">
-  <img src="Screenshots/Executive%20Dashboard.png" alt="Executive Dashboard" width="100%">
-</p>
+- Missing Value Detection
+- Duplicate Detection
+- Duplicate Transaction Validation
+- Orphan Record Detection
+- Negative Value Validation
+- Outlier Detection (IQR Method)
+- Date Validation
+- Warehouse Validation
+- Category Validation
+- Data Quality Scoring
 
-### Inventory Analysis Dashboard
+A complete **Data Quality Report** is also generated.
 
-Tracks inventory value, current stock, availability, warehouse distribution, and products that may require replenishment.
+## Preview
 
-<p align="center">
-  <img src="Screenshots/inventory%20analysis%20dashboard.png" alt="Inventory Analysis Dashboard" width="100%">
-</p>
+![Data Cleaning](Screenshots/data_cleaning.png)
 
-### Sales Dashboard
+---
 
-Analyzes sales and revenue trends, product and category performance, warehouse contribution, and top-performing products.
+# 📊 Step 3 — Power BI Dashboard Development
 
-<p align="center">
-  <img src="Screenshots/sales%20dashboard.png" alt="Sales Dashboard" width="100%">
-</p>
+The cleaned datasets are imported into Power BI where a **Star Schema** data model is built.
 
-### Customer Analytics Dashboard
+Custom DAX measures, KPIs, slicers, and interactive charts are then developed to provide business insights across inventory, sales, customers, and operations.
 
-Explores customer demographics, customer segments, regional performance, purchasing behaviour, and revenue contribution.
+---
 
-<p align="center">
-  <img src="Screenshots/Customer%20analytics%20dashboard.png" alt="Customer Analytics Dashboard" width="100%">
-</p>
+# ⭐ Dashboard Features
 
-### Operations & Performance Dashboard
+✔ Dynamic KPI Cards
 
-Monitors inventory movements, purchase orders, supplier quality, warehouse inventory, and operational KPIs.
+✔ Interactive Slicers
 
-<p align="center">
-  <img src="Screenshots/operations%20%26%20performance%20dashboard.png" alt="Operations and Performance Dashboard" width="100%">
-</p>
+✔ Star Schema Data Model
 
-## Key performance indicators
+✔ Custom DAX Measures
 
-The dashboards include KPIs such as:
+✔ Time Intelligence
 
-- Total revenue, total profit, and profit margin
-- Sales volume and revenue growth
-- Return rate
-- Inventory value, current stock, and stock availability
-- Customer count and customer contribution
-- Supplier quality score and purchase orders
-- Inventory movement and low-stock products
+✔ Business KPIs
 
-## Business questions answered
+✔ Interactive Visualizations
 
-- Which products and categories generate the highest revenue?
-- Which warehouses hold the highest inventory value?
-- Which products need replenishment?
-- How do sales and inventory movements change over time?
-- Which customer segments contribute most to revenue?
-- Which suppliers maintain the strongest quality scores?
-- How are purchase orders and operational performance trending?
+✔ Cross Filtering
 
-## Skills demonstrated
+✔ Trend Analysis
 
-- Business Intelligence and dashboard design
-- Data generation, cleaning, and validation
-- ETL-style data preparation
-- Power BI data modeling and star schema design
-- DAX measures and KPI development
-- Retail, sales, inventory, customer, and operations analytics
+✔ Responsive Dashboard Layout
 
-## Getting started
+---
+
+# 📷 Dashboard Preview
+
+## 📊 Executive Dashboard
+
+Provides an overview of overall business performance.
+
+![Executive Dashboard](Screenshots/Executive%20Dashboard.png)
+
+---
+
+## 📦 Inventory Analysis Dashboard
+
+Tracks inventory levels, warehouse performance, stock availability, and inventory value.
+
+![Inventory Dashboard](Screenshots/Inventory%20Analysis%20Dashboard.png)
+
+---
+
+## 💰 Sales Dashboard
+
+Analyzes sales trends, product performance, warehouse revenue, and customer contribution.
+
+![Sales Dashboard](Screenshots/Sales%20Dashboard.png)
+
+---
+
+## 👥 Customer Analytics Dashboard
+
+Analyzes customer demographics, purchasing behavior, revenue contribution, and regional distribution.
+
+![Customer Dashboard](Screenshots/Customer%20Analytics%20Dashboard.png)
+
+---
+
+## ⚙️ Operations & Performance Dashboard
+
+Monitors inventory movement, purchase orders, supplier quality, and operational efficiency.
+
+![Operations Dashboard](Screenshots/Operations%20Dashboard.png)
+
+---
+
+# 📈 Key Performance Indicators
+
+The dashboards include multiple business KPIs including:
+
+- Total Revenue
+- Total Profit
+- Profit Margin
+- Sales Volume
+- Return Rate
+- Inventory Value
+- Current Stock
+- Stock Availability
+- Revenue Growth
+- Customer Count
+- Supplier Quality Score
+- Purchase Orders
+- Inventory Movement
+- Low Stock Products
+
+---
+
+# 💡 Business Questions Answered
+
+The dashboards help answer questions such as:
+
+- Which product categories generate the highest revenue?
+- Which warehouses contribute the highest inventory value?
+- Which products require immediate replenishment?
+- How does inventory movement change over time?
+- Which customer segment contributes the most revenue?
+- Which age group generates the highest sales?
+- Which suppliers maintain the highest quality scores?
+- How are purchase orders trending over time?
+
+---
+
+# 🧠 Skills Demonstrated
+
+This project demonstrates practical experience in:
+
+- Business Intelligence
+- Data Analytics
+- Dashboard Design
+- Data Cleaning
+- ETL
+- Python Automation
+- Pandas
+- DAX
+- KPI Development
+- Star Schema Design
+- Data Modeling
+- Retail Analytics
+- Data Visualization
+
+---
+
+# ▶️ Getting Started
 
 1. Clone this repository.
-2. Open `PowerBI/StockAndInventoryManagement_new.pbix` in Power BI Desktop.
-3. If Power BI asks for a data source, reconnect it to the files in the `Data` folder.
+
+2. Open:
+
+```
+PowerBI/StockAndInventoryManagement.pbix
+```
+
+3. If prompted, reconnect the CSV files located inside the **Data** folder.
+
 4. Refresh the report.
-5. Use the slicers and visuals to explore the dashboards.
 
-## Future improvements
+5. Explore the interactive dashboards.
 
-- SQL database integration
-- Automated ETL scheduling
-- Real-time dashboard refresh
-- Demand forecasting and inventory optimization
-- Supplier performance forecasting
+---
 
-## Author
+# 📌 Future Improvements
 
-**Sufiyan Nadaf**  
+Possible future enhancements include:
+
+- SQL Database Integration
+- Automated ETL Pipeline
+- Real-Time Dashboard Refresh
+- Forecasting using Power BI
+- Demand Prediction
+- Inventory Optimization
+- Supplier Performance Forecasting
+
+---
+
+# ⭐ If You Like This Project
+
+If you found this project useful or interesting, consider giving it a ⭐ on GitHub.
+
+It helps support the project and encourages future improvements.
+
+---
+
+# 👨‍💻 Author
+
+**Sufiyan Nadaf**
+
 Aspiring Data Analyst | Power BI | Python | SQL | Business Intelligence
 
-If you find this project useful, consider giving the repository a star.
+Feel free to connect and share your feedback!
